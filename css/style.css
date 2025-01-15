@@ -7,3 +7,22 @@
 hr {
     margin: 20px 0;
 }
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    justify-content: space-between;
+    list-style-type: none;    
+}
+
+
+li {
+    margin-right: 15px;
+}
