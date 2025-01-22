@@ -119,3 +119,54 @@ opzioni per nuovo elemento
 - innerText
 
 (riga 83) aggiungo l'elemento 
+
+mioDom -> descrive la struttura degli elementi che voglio creare
+- tipo
+- id, className
+- figli (array)
+
+es. 
+```js
+mioDom = { // oggetto
+    type: "header", // tipo
+    id: "header", // id
+    className: "container", // classe
+    children: [ // array di children
+        {
+            type: "h1", // tipo
+            // className e Id opzionali
+            children: [
+                {
+                    type: "text",
+                    content: "Hello World"
+                }
+            ]
+        },
+        {
+            type: "p",
+            children: [
+                {
+                    type: "text",
+                    children: [
+                        {
+                            type: "text",
+                            content: "Lorem ipsum dolor sit amet,ci"
+                        },
+                        {
+                            type: "span",
+                            content: ""
+                        }
+                    ]
+                } // non c'è content, perché ci sono dei children
+            ]
+        },
+        {
+            type: "p",
+        }
+    ]
+
+}
+```
+
+
+ricorsione

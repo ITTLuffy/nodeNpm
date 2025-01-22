@@ -58,7 +58,7 @@ pippo();
 
 const pluto = {
     nome: "pluto",
-    pippo: function() {
+    pippo: function () {
         console.log(this);
     }
 }
@@ -82,7 +82,76 @@ console.log(nuovoElemento);
 
 lista.appendChild(nuovoElemento); // aggiungo il nuovo elemento
 
+
+const root = $("root");
+
+
 mioDom = { // oggetto
-    type: "ul", // tipo
-    
+    type: "header", // tipo
+    id: "header", // id
+    className: "container", // classe
+    children: [ // array di children
+        {
+            type: "h1", // tipo
+            // className e Id opzionali
+            children: [
+                {
+                    type: "text",
+                    content: "Hello World"
+                }
+            ]
+        },
+        {
+            type: "p",
+            children: [
+                {
+                    type: "text",
+                    children: [
+                        {
+                            type: "text",
+                            content: "Lorem ipsum dolor sit amet,ci"
+                        },
+                        {
+                            type: "span",
+                            content: ""
+                        }
+                    ]
+                } // non c'è content, perché ci sono dei children
+            ]
+        },
+        {
+            type: "p",
+        }
+    ]
+
 }
+
+function render(elemento, parent) {
+    const el = document.createElement(elemento.type);
+    if (elemento.id) { // se ha l'id
+        el.id = elemento.id;
+    }
+    if (elemento.className) { // se ha la classe
+        el.className = elemento.className;
+    }
+    if (elemento.content) { // se ha il content
+        el.textContent = elemento.content;
+    } else {
+        elemento.children.forEach(child => { // per ogni elemento figlio
+            render(child, el); // chiamo la funzione ricorsivamente
+        });
+    }
+    parent.appendChild(el); // aggiungo il figlio al parent
+}
+
+render(mioDom, root);
+
+function contoAllaRovescia(n) {
+    console.log(n);
+    if (n === 0) {
+        return;
+    }
+    contoAllaRovescia(n - 1);
+}
+
+contoAllaRovescia(10);
