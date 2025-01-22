@@ -9,7 +9,7 @@ Poi metto nel gitignore
 
 $ npx live-server --port=3000 nel terminale
 
-## js
+## HTML e CSS
 
 Mettiamo il collegamento in fondo, per permettere al browser di completare la parte di html
 E così inoltre lo script vede il DOM costruito
@@ -51,3 +51,23 @@ h1 {
     color: var(--main-color);
 }
 ```
+
+## js
+
+- document -> ci permette di accedere al DOM
+    - queryselector -> selettore valdido
+    - queryselectorAll -> tutti i selettori validi
+
+si usano meno ora anche i seguenti
+- getElementsByClassName 
+- getElementsByTagName 
+- getElementById
+
+# trucchetti
+- queryselector funziona anche su element
+- 
+- 
+- 
+- 
+- 
+- 
