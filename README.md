@@ -65,9 +65,57 @@ si usano meno ora anche i seguenti
 
 # trucchetti
 - queryselector funziona anche su element
-- 
-- 
-- 
-- 
-- 
-- 
+
+Per usare live server npx five-server (senza node )
+
+this è un riferimento all'oggetto che sta chiamando la funzione
+
+es. codice 
+```js
+function pippo() {
+    console.log(this);
+}
+pippo();
+
+const pluto = {
+    nome: "pluto",
+    pippo: function() {
+        console.log(this);
+    }
+}
+
+pluto.pippo();
+```
+![alt text](image.png)
+
+altro esempio this
+
+```js
+const $ = document.querySelector();
+const $$ = document.querySelectorAll();
+```
+Con questo esempio possiamo dedurre che $ e $$ sono funzioni che vengono chiamate su document e quindi this si riferisce a document 
+In questi due casi non funziona $
+
+Così però
+
+```js
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+```
+con bind si può legare this a document e quindi funziona
+
+Usando queste due cose, si può semplificare la roba
+
+se stampiano la lista (riga 71), vediamo che ci ritorna tutta la parte di html
+    
+![alt text](image-1.png)
+
+(riga 77) se stampo il nuovo elemento che voglio creare, mi risulta (sulla console) li
+
+opzioni per nuovo elemento
+- textContent
+- innerHTML
+- innerText
+
+(riga 83) aggiungo l'elemento 
