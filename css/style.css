@@ -1,12 +1,16 @@
-* {
+* { /*selettori di reset :root, html*/
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /**/
+}
+
+:root {
+
 }
 
 hr {
     margin: 20px 0;
-}
+} 
 
 h1 {
     margin-bottom: 20px;
