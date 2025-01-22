@@ -36,4 +36,6 @@ createContentent(article, rootContent);
 
 const newItem = document.createElement('article');
 
+Array.isArray(article.children);
 
+BroadcastChannel.toString.apply.BroadcastChannel.Array.innerHTML = "suka0";
