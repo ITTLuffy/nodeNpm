@@ -170,3 +170,27 @@ mioDom = { // oggetto
 
 
 ricorsione
+
+RIPASSO VARIO
+- gestire git in locale e in remoto
+- base HTML (non viste web components + cose un po' più avanzate)
+- CSS
+    - regole varie
+    - selettori
+    - posizionamento
+    - :is(), :where() e :has()
+    - unità di misura
+    - media query
+    - variables
+- DOM -> come si manipola il DOM + cosa succede quando si inserisce un url su un motore di ricerca
+- JS
+Come funziona nel browser
+    - call stack -> codice eseguito qui
+    - event loop -> gestisce la coda di eventi nel call stack; se non c'è niente va a vedere le queue
+    - task queue -> 
+    - microtask queue
+    - web API -> non vengono eseguite nello stesso contesto
+
+- hoisting
+Se scrivo una funzione, posso chiamarla prima di dichiararla
+
