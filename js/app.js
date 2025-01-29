@@ -65,8 +65,8 @@ const pluto = {
 
 pluto.pippo();
 
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document); // senza bind non funziona, perché this non è document
+const $$ = document.querySelectorAll.bind(document); // perciò per farla this, prima di estrarla faccio il bind
 
 const lista = $("#main-menu"); // parent
 
@@ -155,3 +155,16 @@ function contoAllaRovescia(n) {
 }
 
 contoAllaRovescia(10);
+
+
+function fattoriale(n) {
+    if (n === 0) {
+        return 1;
+    } else {
+        return n * fattoriale(n - 1);
+    }
+}
+
+// Esempio di utilizzo
+let numero = 5;
+console.log(`Il fattoriale di ${numero} è ${fattoriale(numero)}`);
